@@ -1,0 +1,169 @@
+.assistant-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-border);
+  z-index: -1;
+}
+
+.progress-step {
+  background: var(--card-bg);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.progress-step.active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.file-upload-box {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  background: rgba(15, 23, 42, 0.3);
+}
+
+.file-upload-box:hover {
+  border-color: var(--accent-color);
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.file-upload-box p {
+  color: var(--text-secondary);
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.file-upload-box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.question-box {
+  background: rgba(15, 23, 42, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+}
+
+.question-box h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.tip-card {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.tip-card.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid var(--warning-color);
+  color: #fcd34d;
+}
+
+.tip-card.success {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--success-color);
+  color: #6ee7b7;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  border-left: 2px solid var(--card-border);
+  padding-left: 24px;
+}
+
+.roadmap-step {
+  background: rgba(15, 23, 42, 0.5);
+  padding: 16px;
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid var(--card-border);
+}
+
+.roadmap-step::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 4px solid var(--bg-color);
+}
+
+.step-num {
+  font-size: 0.8rem;
+  color: #60a5fa;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.step-content h4 {
+  margin-bottom: 8px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
